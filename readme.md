@@ -62,6 +62,22 @@ These must be initialised, once the HTML page has loaded
 
 
 
+## Design system - animating with CSS based data-attributes
+
+Using the [data-visiblity="false"] directive, makes use of the Visibility Class, which leans on the Intersection Observer to detect wether the element is in the viewport or not. Once in the viewport, the data-attribute is **updated**, causing the CSS styles to animate and reveal elements into view.
+
+Then for example, the following approach can be used in order to trigger styles in the UI. The animation type can also be declared, following the same pattern. This also helps keep a cleaner class name system.
+
+```
+[data-animate="image"] {
+    transform: translate(-10rem);
+    
+    [data-visibility="true"] & {
+        transform: translate(0);
+    }
+}
+```
+
 
 
 
