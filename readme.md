@@ -18,3 +18,18 @@ Keep all single assets as Symbols in one directory and concatinate them together
 Create a Custom browser `watch` event to trigger DOM updates to data attributes.
 
 How? By using **JS Proxies** (the fundamental native built in way to listen to state changes and trigger a side-effect)
+
+`/js/store`
+
+```
+// useage
+const store = createStore({ appReady: false })
+    
+store.watch('appReady', (value) => {
+  console.log('update DOM data-attribute with', value)
+})
+
+// trigger state change with side effect
+store.state.appReady = true
+```
+
