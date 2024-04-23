@@ -9,6 +9,12 @@
 
     </body>
     <script type="module">
-
+        import createComponents from './js/modules'
+        import Visibility from './helpers/Visibility'
+        import ProgressiveImage from './helpers/ProgressiveImages'
+    
+        new Visibility('[data-visibility]')
+        new ProgressiveImage('[data-lazy-load]')
+        createComponents('[data-module]')
     </script>
 </html>

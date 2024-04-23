@@ -40,4 +40,32 @@ Use data-attributes to define all kinds of behaviours on the targeted DOM elemen
 * Visibility (Once element is within the viewport)
 * Lazy loading
 * Click outside
-* General web component like functionality ie: Carousel 
+* General web component like functionality ie: Carousel
+
+```
+<div data-module="viewfinder" data-visible="false" />
+```
+
+These must be initialised, once the HTML page has loaded
+
+```
+<script type="module">
+    import createComponents from './js/modules'
+    import Visibility from './helpers/Visibility'
+    import ProgressiveImage from './helpers/ProgressiveImages'
+    
+    new Visibility('[data-visibility]')
+    new ProgressiveImage('[data-lazy-load]')
+    createComponents('[data-module]')
+</script>
+```
+
+
+
+
+
+
+
+## Mock Service Worker
+
+Make the most out of mocking http responses, by hijacking cleanly any API call that matches the request 
