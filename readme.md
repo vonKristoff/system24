@@ -33,3 +33,11 @@ store.watch('appReady', (value) => {
 store.state.appReady = true
 ```
 
+## Vanilla JS Modules | Directives
+
+Use data-attributes to define all kinds of behaviours on the targeted DOM element. 
+
+* Visibility (Once element is within the viewport)
+* Lazy loading
+* Click outside
+* General web component like functionality ie: Carousel 
